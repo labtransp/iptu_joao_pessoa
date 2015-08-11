@@ -1,0 +1,1609 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>Iptu_pdi</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <directory>&#x2f;</directory>
+    <parameters>
+    </parameters>
+    <log>
+<trans-log-table><connection/>
+<schema/>
+<table/>
+<size_limit_lines/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
+<perf-log-table><connection/>
+<schema/>
+<table/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>SEQ_NR</id><enabled>Y</enabled><name>SEQ_NR</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>INPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>INPUT_BUFFER_ROWS</name></field><field><id>OUTPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>OUTPUT_BUFFER_ROWS</name></field></perf-log-table>
+<channel-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field><field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field><field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field><field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field><field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field><field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field><field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field><field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field><field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field></channel-log-table>
+<step-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+  <created_user>-</created_user>
+  <created_date>2015&#x2f;08&#x2f;11 15&#x3a;36&#x3a;08.301</created_date>
+  <modified_user>-</modified_user>
+  <modified_date>2015&#x2f;08&#x2f;11 15&#x3a;36&#x3a;08.301</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA&#x3d;</key_for_session_key>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+  </notepads>
+  <connection>
+    <name>slack-aws</name>
+    <server>slack.ckjstzy6gz0p.us-west-2.rds.amazonaws.com</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>slack</database>
+    <port>5432</port>
+    <username>postgres</username>
+    <password>Encrypted 6c9baaeeb90e84a085e557e569e392f69b</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>slack-aws-stage</name>
+    <server>slack-stage.ckjstzy6gz0p.us-west-2.rds.amazonaws.com</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>slack_stage</database>
+    <port>5432</port>
+    <username>postgres</username>
+    <password>Encrypted 6c9baaeeb90e84a085e557e569e392f69b</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>5432</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <order>
+  <hop> <from>Microsoft Excel Input</from><to>Value Mapper</to><enabled>Y</enabled> </hop>
+  <hop> <from>Filter rows</from><to>Dummy &#x28;do nothing&#x29;</to><enabled>Y</enabled> </hop>
+  <hop> <from>Filter rows</from><to>Sort rows</to><enabled>Y</enabled> </hop>
+  <hop> <from>Sort rows</from><to>Select values</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select values</from><to>Unique rows</to><enabled>N</enabled> </hop>
+  <hop> <from>CSV file input</from><to>Sort rows 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Stream lookup</from><to>Dummy &#x28;do nothing&#x29; 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Sort rows 2</from><to>String operations</to><enabled>Y</enabled> </hop>
+  <hop> <from>String operations</from><to>Stream lookup</to><enabled>Y</enabled> </hop>
+  <hop> <from>Value Mapper</from><to>String operations 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>String operations 2</from><to>Filter rows</to><enabled>Y</enabled> </hop>
+  <hop> <from>Unique rows</from><to>Value Mapper 2</to><enabled>N</enabled> </hop>
+  <hop> <from>Value Mapper 2</from><to>Stream lookup</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select values</from><to>Value Mapper 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Calculator</from><to>Dummy &#x28;do nothing&#x29; 3</to><enabled>N</enabled> </hop>
+  <hop> <from>Dummy &#x28;do nothing&#x29; 2</from><to>Add constants</to><enabled>Y</enabled> </hop>
+  <hop> <from>Add constants</from><to>Calculator</to><enabled>Y</enabled> </hop>
+  <hop> <from>Calculator</from><to>Modified Java Script Value</to><enabled>Y</enabled> </hop>
+  <hop> <from>Modified Java Script Value</from><to>Text file output</to><enabled>Y</enabled> </hop>
+  </order>
+  <step>
+    <name>Add constants</name>
+    <type>Constant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>cento</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>100</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1008</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>CSV file input</name>
+    <type>CsvInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <filename>C&#x3a;&#x5c;Users&#x5c;Efrem&#x5c;Downloads&#x5c;bairros.csv</filename>
+    <filename_field/>
+    <rownum_field/>
+    <include_filename>N</include_filename>
+    <separator>,</separator>
+    <enclosure>&#x22;</enclosure>
+    <header>Y</header>
+    <buffer_size>50000</buffer_size>
+    <lazy_conversion>Y</lazy_conversion>
+    <add_filename_result>N</add_filename_result>
+    <parallel>N</parallel>
+    <newline_possible>N</newline_possible>
+    <encoding>UTF-8</encoding>
+    <fields>
+      <field>
+        <name>the_geom</name>
+        <type>String</type>
+        <format/>
+        <currency>R&#x24;</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>29652</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>bairro</name>
+        <type>String</type>
+        <format/>
+        <currency>R&#x24;</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>27</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>ca_d</name>
+        <type>Integer</type>
+        <format>&#x23;</format>
+        <currency>R&#x24;</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>15</length>
+        <precision>0</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>cod_loc</name>
+        <type>Integer</type>
+        <format>&#x23;</format>
+        <currency>R&#x24;</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>15</length>
+        <precision>0</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>bairro_1</name>
+        <type>String</type>
+        <format/>
+        <currency>R&#x24;</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>27</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>densidade</name>
+        <type>Number</type>
+        <format>&#x23;.&#x23;</format>
+        <currency>R&#x24;</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>perim_km</name>
+        <type>Number</type>
+        <format>&#x23;.&#x23;</format>
+        <currency>R&#x24;</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>area_km2</name>
+        <type>Number</type>
+        <format>&#x23;.&#x23;</format>
+        <currency>R&#x24;</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>cartodb_id</name>
+        <type>Integer</type>
+        <format>&#x23;</format>
+        <currency>R&#x24;</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>15</length>
+        <precision>0</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>created_at</name>
+        <type>Date</type>
+        <format>yyyy-MM-dd HH&#x3a;mm&#x3a;ss</format>
+        <currency>R&#x24;</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>updated_at</name>
+        <type>Date</type>
+        <format>yyyy-MM-dd HH&#x3a;mm&#x3a;ss</format>
+        <currency>R&#x24;</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>620</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Calculator</name>
+    <type>Calculator</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+       <calculation><field_name>porcentagem_inadimplencia</field_name>
+<calc_type>MULTIPLY</calc_type>
+<field_a>&#x28;&#x25;&#x29;_inadimplencia</field_a>
+<field_b>cento</field_b>
+<field_c/>
+<value_type>None</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask>&#x23;.00</conversion_mask>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>porcentagem_recebido</field_name>
+<calc_type>MULTIPLY</calc_type>
+<field_a>&#x28;&#x25;&#x29;_recebido</field_a>
+<field_b>cento</field_b>
+<field_c/>
+<value_type>None</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask>&#x23;.00</conversion_mask>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1088</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Dummy &#x28;do nothing&#x29;</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>368</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Dummy &#x28;do nothing&#x29; 2</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>928</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Dummy &#x28;do nothing&#x29; 3</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1180</xloc>
+      <yloc>60</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Filter rows</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>Sort rows</send_true_to>
+<send_false_to>Dummy &#x28;do nothing&#x29;</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <leftvalue>R&#xf3;tulos de Linha</leftvalue>
+ <function>&#x3c;&#x3e;</function>
+ <rightvalue/>
+ <value><name>constant</name><type>String</type><text>TOTAL GERAL</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>368</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Microsoft Excel Input</name>
+    <type>ExcelInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <header>Y</header>
+    <noempty>Y</noempty>
+    <stoponempty>Y</stoponempty>
+    <filefield/>
+    <sheetfield>ano</sheetfield>
+    <sheetrownumfield/>
+    <rownumfield/>
+    <sheetfield>ano</sheetfield>
+    <filefield/>
+    <limit>0</limit>
+    <encoding>ISO-8859-1</encoding>
+    <add_to_result_filenames>Y</add_to_result_filenames>
+    <accept_filenames>N</accept_filenames>
+    <accept_field/>
+    <accept_stepname/>
+    <file>
+      <name>C&#x3a;&#x5c;Users&#x5c;Efrem&#x5c;Downloads&#x5c;dados_csv_iptu_2009_a_2014_pagamento_ajustado.xls</name>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+    <fields>
+      <field>
+        <name>R&#xf3;tulos de Linha</name>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>Valor IPTU</name>
+        <type>Number</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format>&#x23;.00</format>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>Valor Pago</name>
+        <type>Number</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format>&#x23;.00</format>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>Desconto</name>
+        <type>Number</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format>&#x23;.00</format>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>Juros</name>
+        <type>Number</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format>&#x23;.00</format>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>IPTU Recebido</name>
+        <type>Number</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format>&#x23;.00</format>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>&#x28;&#x25;&#x29;</name>
+        <type>Number</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format>&#x23;.00</format>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>IPTU Quitado</name>
+        <type>Number</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format>&#x23;.00</format>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>Inadimpl&#xea;ncia</name>
+        <type>Number</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format>&#x23;.00</format>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+      <field>
+        <name>&#x28;&#x25;&#x29;_inadimplencia</name>
+        <type>Number</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+        <format>&#x23;.00</format>
+        <currency/>
+        <decimal/>
+        <group/>
+      </field>
+    </fields>
+    <sheets>
+      <sheet>
+        <name>Dados CSV IPTU 2009 PAGAMENTO A</name>
+        <startrow>2</startrow>
+        <startcol>0</startcol>
+        </sheet>
+      <sheet>
+        <name>2010</name>
+        <startrow>2</startrow>
+        <startcol>0</startcol>
+        </sheet>
+      <sheet>
+        <name>2011</name>
+        <startrow>2</startrow>
+        <startcol>0</startcol>
+        </sheet>
+      <sheet>
+        <name>2012</name>
+        <startrow>2</startrow>
+        <startcol>0</startcol>
+        </sheet>
+      <sheet>
+        <name>2013</name>
+        <startrow>2</startrow>
+        <startcol>0</startcol>
+        </sheet>
+      <sheet>
+        <name>2014</name>
+        <startrow>2</startrow>
+        <startcol>0</startcol>
+        </sheet>
+    </sheets>
+    <strict_types>N</strict_types>
+    <error_ignored>N</error_ignored>
+    <error_line_skipped>N</error_line_skipped>
+    <bad_line_files_destination_directory/>
+    <bad_line_files_extension>warning</bad_line_files_extension>
+    <error_line_files_destination_directory/>
+    <error_line_files_extension>error</error_line_files_extension>
+    <line_number_files_destination_directory/>
+    <line_number_files_extension>line</line_number_files_extension>
+    <shortFileFieldName/>
+    <pathFieldName/>
+    <hiddenFieldName/>
+    <lastModificationTimeFieldName/>
+    <uriNameFieldName/>
+    <rootUriNameFieldName/>
+    <extensionFieldName/>
+    <sizeFieldName/>
+    <spreadsheet_type>JXL</spreadsheet_type>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>80</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Select values</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>R&#xf3;tulos de Linha</name>
+        <rename>Bairro</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Valor IPTU</name>
+        <rename>Valor_IPTU</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Valor Pago</name>
+        <rename>Valor_Pago</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Desconto</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Juros</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>IPTU Recebido</name>
+        <rename>IPTU_Recebido</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>&#x28;&#x25;&#x29;</name>
+        <rename>&#x28;&#x25;&#x29;_recebido</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>IPTU Quitado</name>
+        <rename>IPTU_Quitado</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Inadimpl&#xea;ncia</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>&#x28;&#x25;&#x29;_inadimplencia</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ano</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>576</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Sort rows</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
+      <prefix>out</prefix>
+      <sort_size>1000000</sort_size>
+      <free_memory/>
+      <compress>N</compress>
+      <compress_variable/>
+      <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>R&#xf3;tulos de Linha</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>480</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Sort rows 2</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
+      <prefix>out</prefix>
+      <sort_size>1000000</sort_size>
+      <free_memory/>
+      <compress>N</compress>
+      <compress_variable/>
+      <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>bairro</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>720</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Stream lookup</name>
+    <type>StreamLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <from>String operations</from>
+    <input_sorted>N</input_sorted>
+    <preserve_memory>Y</preserve_memory>
+    <sorted_list>N</sorted_list>
+    <integer_pair>N</integer_pair>
+    <lookup>
+      <key>
+        <name>Bairro</name>
+        <field>bairro</field>
+      </key>
+      <value>
+        <name>the_geom</name>
+        <rename>the_geom</rename>
+        <default/>
+        <type>String</type>
+      </value>
+      <value>
+        <name>bairro</name>
+        <rename>bairro</rename>
+        <default/>
+        <type>String</type>
+      </value>
+      <value>
+        <name>ca_d</name>
+        <rename>ca_d</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+      <value>
+        <name>cod_loc</name>
+        <rename>cod_loc</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+      <value>
+        <name>bairro_1</name>
+        <rename>bairro_1</rename>
+        <default/>
+        <type>String</type>
+      </value>
+      <value>
+        <name>densidade</name>
+        <rename>densidade</rename>
+        <default/>
+        <type>Number</type>
+      </value>
+      <value>
+        <name>perim_km</name>
+        <rename>perim_km</rename>
+        <default/>
+        <type>Number</type>
+      </value>
+      <value>
+        <name>area_km2</name>
+        <rename>area_km2</rename>
+        <default/>
+        <type>Number</type>
+      </value>
+      <value>
+        <name>cartodb_id</name>
+        <rename>cartodb_id</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+      <value>
+        <name>created_at</name>
+        <rename>created_at</rename>
+        <default/>
+        <type>Date</type>
+      </value>
+      <value>
+        <name>updated_at</name>
+        <rename>updated_at</rename>
+        <default/>
+        <type>Date</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>816</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>String operations</name>
+    <type>StringOperations</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>bairro</in_stream_name>
+        <out_stream_name/>
+        <trim_type>both</trim_type>
+        <lower_upper>upper</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>816</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>String operations 2</name>
+    <type>StringOperations</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>R&#xf3;tulos de Linha</in_stream_name>
+        <out_stream_name/>
+        <trim_type>both</trim_type>
+        <lower_upper>upper</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>none</remove_special_characters>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>288</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Text file output</name>
+    <type>TextFileOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <separator>&#x3b;</separator>
+    <enclosure>&#x22;</enclosure>
+    <enclosure_forced>Y</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>Y</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <compression>None</compression>
+    <encoding>UTF-8</encoding>
+    <endedLine/>
+    <fileNameInField>N</fileNameInField>
+    <fileNameField/>
+    <create_parent_folder>Y</create_parent_folder>
+    <file>
+      <name>C&#x3a;&#x5c;Users&#x5c;Efrem&#x5c;Desktop&#x5c;IPTU_Joao_Pessoa</name>
+      <is_command>N</is_command>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <extention>csv</extention>
+      <append>N</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <add_to_result_filenames>Y</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery>0</splitevery>
+    </file>
+    <fields>
+      <field>
+        <name>cartodb_id</name>
+        <type>Integer</type>
+        <format>0</format>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>Bairro</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>the_geom</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>Valor_IPTU</name>
+        <type>String</type>
+        <format>&#x23;&#x23;&#x23;,&#x23;&#x23;&#x23;,&#x23;&#x23;&#x23;.&#x23;</format>
+        <currency/>
+        <decimal>,</decimal>
+        <group>.</group>
+        <nullif/>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>Valor_Pago</name>
+        <type>String</type>
+        <format>&#x23;&#x23;&#x23;,&#x23;&#x23;&#x23;,&#x23;&#x23;&#x23;.&#x23;</format>
+        <currency/>
+        <decimal>,</decimal>
+        <group>.</group>
+        <nullif/>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>Desconto</name>
+        <type>String</type>
+        <format>&#x23;&#x23;&#x23;,&#x23;&#x23;&#x23;,&#x23;&#x23;&#x23;.&#x23;</format>
+        <currency/>
+        <decimal>,</decimal>
+        <group>.</group>
+        <nullif/>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>Juros</name>
+        <type>String</type>
+        <format>&#x23;&#x23;&#x23;,&#x23;&#x23;&#x23;,&#x23;&#x23;&#x23;.&#x23;</format>
+        <currency/>
+        <decimal>,</decimal>
+        <group>.</group>
+        <nullif/>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>IPTU_Recebido</name>
+        <type>Number</type>
+        <format>&#x23;&#x23;&#x23;,&#x23;&#x23;&#x23;,&#x23;&#x23;&#x23;.&#x23;</format>
+        <currency/>
+        <decimal>,</decimal>
+        <group>.</group>
+        <nullif/>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>porcentagem_recebido</name>
+        <type>String</type>
+        <format>&#x23;&#x23;&#x23;,&#x23;&#x23;&#x23;,&#x23;&#x23;&#x23;.&#x23;</format>
+        <currency/>
+        <decimal>,</decimal>
+        <group>.</group>
+        <nullif/>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>IPTU_Quitado</name>
+        <type>Number</type>
+        <format>&#x23;&#x23;&#x23;,&#x23;&#x23;&#x23;,&#x23;&#x23;&#x23;.&#x23;</format>
+        <currency/>
+        <decimal>,</decimal>
+        <group>.</group>
+        <nullif/>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>Inadimpl&#xea;ncia</name>
+        <type>Number</type>
+        <format>&#x23;&#x23;&#x23;,&#x23;&#x23;&#x23;,&#x23;&#x23;&#x23;.&#x23;</format>
+        <currency/>
+        <decimal>,</decimal>
+        <group>.</group>
+        <nullif/>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>porcentagem_inadimplencia</name>
+        <type>String</type>
+        <format>&#x23;&#x23;&#x23;,&#x23;&#x23;&#x23;,&#x23;&#x23;&#x23;.&#x23;</format>
+        <currency/>
+        <decimal>,</decimal>
+        <group>.</group>
+        <nullif/>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>ano</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>bairro_1</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>ca_d</name>
+        <type>Integer</type>
+        <format>0</format>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>cod_loc</name>
+        <type>Integer</type>
+        <format>0</format>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>densidade</name>
+        <type>Number</type>
+        <format>0.&#x23;&#x23;&#x23;&#x23;&#x23;</format>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>perim_km</name>
+        <type>Number</type>
+        <format>0.&#x23;&#x23;&#x23;&#x23;&#x23;</format>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>area_km2</name>
+        <type>Number</type>
+        <format>0.&#x23;&#x23;&#x23;&#x23;&#x23;</format>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>created_at</name>
+        <type>Date</type>
+        <format>yyyy-MM-dd HH&#x3a;mm&#x3a;ss</format>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>updated_at</name>
+        <type>Date</type>
+        <format>yyyy-MM-dd HH&#x3a;mm&#x3a;ss</format>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>num_Desconto</name>
+        <type>Number</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>num_IPTU_Quitado</name>
+        <type>Number</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>num_IPTU_Recebido</name>
+        <type>Number</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>num_Inadimpl&#xea;ncia</name>
+        <type>Number</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>num_Valor_IPTU</name>
+        <type>Number</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>num_Valor_Pago</name>
+        <type>Number</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>num_porcentagem_inadimplencia</name>
+        <type>Number</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>num_porcentagem_recebido</name>
+        <type>Number</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>num_Juros</name>
+        <type>Number</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1100</xloc>
+      <yloc>320</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Unique rows</name>
+    <type>Unique</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <count_rows>N</count_rows>
+      <count_field/>
+      <reject_duplicate_row>N</reject_duplicate_row>
+      <error_description/>
+    <fields>      <field>        <name>Bairro</name>
+        <case_insensitive>N</case_insensitive>
+        </field>      </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>656</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Value Mapper</name>
+    <type>ValueMapper</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <field_to_use>ano</field_to_use>
+    <target_field/>
+    <non_match_default/>
+    <fields>
+      <field>
+        <source_value>Dados CSV IPTU 2009 PAGAMENTO A</source_value>
+        <target_value>2009</target_value>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>192</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Value Mapper 2</name>
+    <type>ValueMapper</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <field_to_use>Bairro</field_to_use>
+    <target_field/>
+    <non_match_default/>
+    <fields>
+      <field>
+        <source_value>BAIRRO SAO JOS&#xc9;</source_value>
+        <target_value>SAO JOSE</target_value>
+      </field>
+      <field>
+        <source_value>CASTELO BRANCO,PRES.</source_value>
+        <target_value>CASTELO BRANCO</target_value>
+      </field>
+      <field>
+        <source_value>CIDADE UNIVERSITARIA</source_value>
+        <target_value>JARDIM CIDADE UNIVERSITARIA</target_value>
+      </field>
+      <field>
+        <source_value>CIDADE FUNCIONARIOS</source_value>
+        <target_value>FUNCIONARIOS</target_value>
+      </field>
+      <field>
+        <source_value>COSTA E SILVA,PRES.</source_value>
+        <target_value>COSTA E SILVA</target_value>
+      </field>
+      <field>
+        <source_value>ERNANI SATIRO,GOV.</source_value>
+        <target_value>ERNANI SATIRO</target_value>
+      </field>
+      <field>
+        <source_value>ERNESTO GEISEL,PRES.</source_value>
+        <target_value>ERNESTO GEISEL</target_value>
+      </field>
+      <field>
+        <source_value>GROT&#xc3;O</source_value>
+        <target_value>GROTAO</target_value>
+      </field>
+      <field>
+        <source_value>JARDIM TREZE DE MAIO</source_value>
+        <target_value>TREZE DE MAIO</target_value>
+      </field>
+      <field>
+        <source_value>JOAO AGRIPINO,GOV.</source_value>
+        <target_value>JOAO AGRIPINO</target_value>
+      </field>
+      <field>
+        <source_value>JOSE AMERICO DE ALMEIDA</source_value>
+        <target_value>JOSE AMERICO</target_value>
+      </field>
+      <field>
+        <source_value>MU&#xc7;UMAGRO</source_value>
+        <target_value>MUCUMAGRO</target_value>
+      </field>
+      <field>
+        <source_value>PLANALTO DA BOA ESPERAN&#xc7;A</source_value>
+        <target_value>PLANALTO BOA ESPERANCA</target_value>
+      </field>
+      <field>
+        <source_value>PONTA DO SEIXAS</source_value>
+        <target_value>PONTA DOS SEIXAS</target_value>
+      </field>
+      <field>
+        <source_value>VALENTINA FIGUEIREDO</source_value>
+        <target_value>VALENTINA</target_value>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>736</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Modified Java Script Value</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xd;&#xa;&#xd;&#xa;var num_Desconto &#x3d; Desconto&#x3b;&#xd;&#xa;var num_Juros &#x3d; Juros&#x3b;&#xd;&#xa;var num_porcentagem_recebido &#x3d; porcentagem_recebido&#x3b;&#xd;&#xa;var num_Inadimpl&#xea;ncia &#x3d; Inadimpl&#xea;ncia&#x3b;&#xd;&#xa;var num_porcentagem_inadimplencia &#x3d; porcentagem_inadimplencia&#x3b;&#xd;&#xa;var num_Valor_IPTU &#x3d; Valor_IPTU&#x3b;&#xd;&#xa;var num_Valor_Pago &#x3d; Valor_Pago&#x3b;&#xd;&#xa;var num_IPTU_Recebido &#x3d; IPTU_Recebido&#x3b;&#xd;&#xa;var num_IPTU_Quitado &#x3d; IPTU_Quitado&#x3b;&#xd;&#xa;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>num_Desconto</name>
+        <rename>num_Desconto</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>num_Juros</name>
+        <rename>num_Juros</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>num_porcentagem_recebido</name>
+        <rename>num_porcentagem_recebido</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>num_Inadimpl&#xea;ncia</name>
+        <rename>num_Inadimpl&#xea;ncia</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>num_porcentagem_inadimplencia</name>
+        <rename>num_porcentagem_inadimplencia</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>num_Valor_IPTU</name>
+        <rename>num_Valor_IPTU</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>num_Valor_Pago</name>
+        <rename>num_Valor_Pago</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>num_IPTU_Recebido</name>
+        <rename>num_IPTU_Recebido</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>num_IPTU_Quitado</name>
+        <rename>num_IPTU_Quitado</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1080</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step_error_handling>
+  </step_error_handling>
+   <slave-step-copy-partition-distribution>
+</slave-step-copy-partition-distribution>
+   <slave_transformation>N</slave_transformation>
+
+</transformation>
